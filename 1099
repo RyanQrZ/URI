@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+int main(){
+
+    int c, c2, c3, n, x, y, sum{0};
+
+    cin >> n;
+
+    for(c=1; c<=n; c++){
+        cin >> x >> y;
+
+        if(x > y){
+            for(c2=y+1; c2<x; c2++){
+                if(c2%2 != 0){
+                    sum = sum + c2;
+                }
+            }
+            cout << sum << endl;
+            sum = 0;
+        }
+        else if(x < y){
+            for(c3=x+1; c3<y; c3++){
+                if(c3%2 != 0){
+                    sum = sum + c3;
+                }
+            }
+            cout << sum << endl;
+            sum = 0;
+        }
+        else{
+            cout<< 0 << endl;
+        }
+    }
+
+    return 0;
+}
