@@ -1,31 +1,26 @@
 #include <iostream>
 using namespace std;
-
-void coord(){
-    int x, y;
-    cin >> x >> y;
-
-    while(x!=0 && y!=0){
-        if(x>0 && y>0){
-            cout << "primeiro" << endl;
-        }
-        else if(x<0 && y>0){
-            cout << "segundo" << endl;
-        }
-        else if(x<0 && y<0){
-            cout << "terceiro" << endl;
-        }
-        else if(x>0 && y<0){
-            cout << "quarto" << endl;
-        }
-
-        cin >> x >> y;
-    }
-}
-
 int main(){
 
-    coord();
+    int x, y, c;
+
+    cin >> x;
+    cin >> y;
+
+    if(x < y){
+        for(c=x+1; c<y; c++){
+            if(c%5 == 2 || c%5 == 3){
+                cout << c << endl;
+            }
+        }
+    }
+    else if(x > y){
+        for(c=y+1; c<x; c++){
+            if(c%5 == 2 || c%5 == 3){
+                cout << c << endl;
+            }
+        }
+    }
 
     return 0;
 }
