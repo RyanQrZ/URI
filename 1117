@@ -1,0 +1,47 @@
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+    struct
+    {
+        float n1;
+        float n2;
+        float sum;
+    } nota;
+
+void estrut()
+{
+
+    struct notaAluno;
+
+    cout << setprecision(2) << fixed;
+
+    cin >> nota.n1;
+
+    while(nota.n1 < 0 || nota.n1 > 10)
+    {
+        cout << "nota invalida\n";
+        cin >> nota.n1;
+    }
+
+    cin >> nota.n2;
+
+    while(nota.n2 < 0 || nota.n2 > 10)
+    {
+        cout << "nota invalida\n";
+        cin >> nota.n2;
+    }
+
+    nota.sum = (nota.n1 + nota.n2) / 2;
+
+    cout << "media = " << nota.sum << endl;
+}
+
+int main()
+{
+
+    estrut();
+
+    return 0;
+}
